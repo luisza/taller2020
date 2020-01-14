@@ -1,19 +1,23 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
+<div class="container">
+    <h1> Bingo esto es content</h1>
 
-<h1> Bingo esto es content</h1>
+    <p>{{ hora }}</p>
+    <p> {{request.user }} </p>
 
-<p>{{ hora }}</p>
-<p> {{request.user }} </p>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <form method="POST" action="{% url 'pag_principal' %}">
+                {% csrf_token %}
+                {{ form|crispy }}
+                <input type="submit" class="btn btn-info" value="Enviar">
+            </form>
+        </div>
+    </div>
+</div>
 
-<form method="POST" action="{% url 'pag_principal' %}">
-<table>
-    {% csrf_token %}
-    {{ form }}
-    <tr>
-        <td></td><td> <input type="submit" value="Enviar"> </td>
-    </tr>
-</table>
-</form>
+
 {% endblock %}

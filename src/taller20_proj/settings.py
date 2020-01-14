@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'miapp',
     'crispy_forms',
+
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,8 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 ROOT_URLCONF = 'taller20_proj.urls'
 
 TEMPLATES = [

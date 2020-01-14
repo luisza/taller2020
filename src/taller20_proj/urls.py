@@ -16,7 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from miapp.urls import urlpatterns as miappurl
+from django.contrib.auth import views as auth_views
 
 urlpatterns = miappurl + [
     path('admin/', admin.site.urls),
+    path('accounts/login/', auth_views.LoginView.as_view(template_name='miapp/login.html'), name='login'),
 ]
