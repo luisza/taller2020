@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> Bingo esto es content</h1>
+
+<p>{{ hora }}</p>
+<p> {{request.user }} </p>
+
+<form method="POST" action="{% url 'pag_principal' %}">
+<table>
+    {% csrf_token %}
+    {{ form }}
+    <tr>
+        <td></td><td> <input type="submit" value="Enviar"> </td>
+    </tr>
+</table>
+</form>
+{% endblock %}
