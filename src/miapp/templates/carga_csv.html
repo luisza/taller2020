@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <input type="submit" value="enviar" />
+</form>
+<br><br><br>
+<h3> Duración de la importación {{duracion}} minutos, en segundos es {{sduracion}}</h3>
+{% endblock %}

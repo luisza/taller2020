@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'miapp',
     'crispy_forms',
+    'django_extensions',
 
 ]
 

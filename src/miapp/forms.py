@@ -21,3 +21,7 @@ class MiContacto(forms.Form):
             if nombre.lower() != email.lower():
                 raise forms.ValidationError("No el correo no es el primer nombre")
 
+
+
+class CSVForm(forms.Form):
+    file = forms.FileField()

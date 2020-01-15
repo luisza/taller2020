@@ -4,6 +4,7 @@ from miapp import views
 
 urlpatterns = [
     path('', views.miindex, name="pag_principal" ),
+    path('carga_csv', views.cargar_csv),
     path('csv', views.descargue_csv),
     path('hora', views.mi_vista_cacheada),
     path('autenticado', views.mi_vista_autorizada),
